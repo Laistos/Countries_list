@@ -2,6 +2,8 @@
 import {ref} from "vue";
 import SearchComponent from "@/components/searchComponent.vue";
 import CountriesComponent from "@/components/countriesComponent.vue";
+import MenuComponent from "@/components/menuComponent.vue";
+import ButtonComponent from "@/components/buttonComponent.vue";
 
 const countries = ref([
       {flag: '/flags/azerbaijan.png', name: 'Азербайджан', price: '99',},
@@ -21,6 +23,8 @@ const countries = ref([
   <p class="title">Ближние дали</p>
   <search-component />
   <countries-component :countries='countries'/>
+  <menu-component />
+  <button-component />
 </div>
 </template>
 

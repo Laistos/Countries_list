@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import {computed, ref} from "vue";
 import SearchComponent from "@/components/searchComponent.vue";
 import CountriesComponent from "@/components/countriesComponent.vue";
 import MenuComponent from "@/components/menuComponent.vue";
 import ButtonComponent from "@/components/buttonComponent.vue";
+
+const search = ref('')
+
+const filteredCountries = computed(()=> countries.value.filter(country => {country.name.toLowerCase().includes(search.value.toLowerCase())}))
 
 const countries = ref([
       {flag: '/flags/azerbaijan.png', name: 'Азербайджан', price: '99',},
@@ -16,13 +20,15 @@ const countries = ref([
       {flag: '/flags/france.png', name: 'Франция', price: '99',},
     ]
 )
+
+console.log(search.value)
 </script>
 
 <template>
 <div class="wrapper">
   <p class="title">Ближние дали</p>
-  <search-component />
-  <countries-component :countries='countries'/>
+  <search-component v-model="search"/>
+  <countries-component :countries='filteredCountries' />
   <menu-component />
   <button-component />
 </div>

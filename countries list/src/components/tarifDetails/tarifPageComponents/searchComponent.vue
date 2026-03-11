@@ -1,7 +1,5 @@
 <script setup lang="ts">
-defineEmits('update: modelValue')
-
-const search = defineModel({default: ''})
+const search = defineModel({default: ''}) //отлавливает значение и передает в родительский элемент
 </script>
 
 <template>

@@ -1,16 +1,15 @@
 <script setup lang="ts">
 const clicked = () => {
-  alert('clicked')
-}
+  alert("clicked");
+};
 </script>
 
 <template>
-  <button @click="clicked"
-          class="submit_button">Подключить</button>
+  <router-link to="/success" class="submit_button">Подключить</router-link>
 </template>
 
 <style scoped>
-.submit_button{
+.submit_button {
   width: 100%;
   background-color: #622681;
   color: #ffffff;
@@ -22,7 +21,10 @@ const clicked = () => {
   border: none;
   cursor: pointer;
   outline: none;
-  transition: background-color 0.2s ease, transform 0.1s active;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s active;
 }
 
 .submit_button:hover {

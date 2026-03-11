@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import TarifCardComponent from "@/components/tarifCard/tarifCardComponent.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="wrapper">

@@ -26,7 +26,25 @@ const countries = ref([
 </script>
 
 <template>
-  <p class="title">Ближние дали</p>
+  <header class="header">
+    <router-link to="/" class="back"
+      ><svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 12H5M5 12L12 19M5 12L12 5"
+          stroke="#1a1a24"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        /></svg
+    ></router-link>
+    <p class="title">Ближние дали</p>
+  </header>
   <search-component v-model="search" />
   <countries-component :countries="filteredCountries" />
   <menu-component />
@@ -34,9 +52,14 @@ const countries = ref([
 </template>
 
 <style scoped>
+.header {
+  display: flex;
+  align-items: center;
+}
 .title {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
+  flex-grow: 1;
 }
 </style>

@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => import("../components/tarifCard/tarifCardComponent.vue"),
+      component: () => import("@/views/tarifCard/tarifCardComponent.vue"),
     },
     {
       path: "/about",
@@ -16,8 +16,7 @@ const router = createRouter({
     {
       path: "/success",
       name: "success",
-      component: () =>
-        import("../components/successComponent/successComponent.vue"),
+      component: () => import("@/views/successComponent/successComponent.vue"),
     },
   ],
 });

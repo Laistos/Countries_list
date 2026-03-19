@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import CountriesComponent from "@/views/tarifDetails/tarifPageComponents/countriesComponent.vue";
 import ButtonComponent from "@/views/tarifDetails/tarifPageComponents/buttonComponent.vue";
-import MenuComponent from "@/views/tarifDetails/tarifPageComponents/menuComponent.vue";
 import SearchComponent from "@/views/tarifDetails/tarifPageComponents/searchComponent.vue";
 import { computed, ref } from "vue";
-import MenuComponentTest from "@/views/tarifDetails/tarifPageComponents/menuComponentTest.vue";
 import CardInfo from "@/components/cardInfoComponent/cardInfo.vue";
 
 const search = ref("");

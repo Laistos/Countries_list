@@ -6,6 +6,11 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
+      component: () => import("@/views/homePage/homePage.vue"),
+    },
+    {
+      path: "/promotional",
+      name: "promotional",
       component: () => import("@/views/tarifCard/tarifCardComponent.vue"),
     },
     {
@@ -17,6 +22,11 @@ const router = createRouter({
       path: "/success",
       name: "success",
       component: () => import("@/views/successComponent/successComponent.vue"),
+    },
+    {
+      path: "/standard",
+      name: "standard",
+      component: () => import("@/views/standardTarif/standardTarif.vue"),
     },
   ],
 });

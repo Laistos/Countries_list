@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import CountriesComponent from "@/views/tarifDetails/tarifPageComponents/countriesComponent.vue";
 import ButtonComponent from "@/views/tarifDetails/tarifPageComponents/buttonComponent.vue";
-import SearchComponent from "@/views/tarifDetails/tarifPageComponents/searchComponent.vue";
+import SearchComponent from "@/components/searchComponent/searchComponent.vue";
 import { computed, ref } from "vue";
 import CardInfo from "@/components/cardInfoComponent/cardInfo.vue";
+import CountriesList from "@/components/countriesList/countriesList.vue";
 
 const search = ref("");
 
@@ -46,7 +46,7 @@ const countries = ref([
     <p class="title">Ближние дали</p>
   </header>
   <search-component v-model="search" />
-  <countries-component :countries="filteredCountries" />
+  <countries-list :countries="filteredCountries" />
   <card-info title="Подключенные акции">
     <p class="card_text">Чтобы подключить акцию наберите : *989*1#OK</p>
     <p class="card_text">

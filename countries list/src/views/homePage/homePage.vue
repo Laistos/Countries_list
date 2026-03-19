@@ -1,11 +1,22 @@
 <script setup lang="ts"></script>
 
 <template>
-  <router-link to="/success" class="submit_button">Подключить</router-link>
+  <div class="wrapper">
+    <router-link to="/standard"
+      ><button class="button">Стандартные тарифы</button></router-link
+    >
+    <router-link to="/promotional"
+      ><button class="button">Акицонные тарифы</button></router-link
+    >
+  </div>
 </template>
 
 <style scoped>
-.submit_button {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.button {
   width: 100%;
   background-color: #622681;
   color: #ffffff;
@@ -18,16 +29,18 @@
   cursor: pointer;
   outline: none;
   text-decoration: none;
+  margin-top: 40px;
   transition:
     background-color 0.2s ease,
-    transform 0.1s active;
+    transform 0.1s,
+    active;
 }
 
-.submit_button:hover {
+.button:hover {
   background-color: #521f6d;
 }
 
-.submit_button:active {
+.button:active {
   transform: scale(0.98);
 }
 </style>

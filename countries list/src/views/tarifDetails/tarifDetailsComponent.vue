@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import CountriesComponent from "@/components/tarifDetails/tarifPageComponents/countriesComponent.vue";
-import ButtonComponent from "@/components/tarifDetails/tarifPageComponents/buttonComponent.vue";
-import MenuComponent from "@/components/tarifDetails/tarifPageComponents/menuComponent.vue";
-import SearchComponent from "@/components/tarifDetails/tarifPageComponents/searchComponent.vue";
+import CountriesComponent from "@/views/tarifDetails/tarifPageComponents/countriesComponent.vue";
+import ButtonComponent from "@/views/tarifDetails/tarifPageComponents/buttonComponent.vue";
+import MenuComponent from "@/views/tarifDetails/tarifPageComponents/menuComponent.vue";
+import SearchComponent from "@/views/tarifDetails/tarifPageComponents/searchComponent.vue";
 import { computed, ref } from "vue";
+import MenuComponentTest from "@/views/tarifDetails/tarifPageComponents/menuComponentTest.vue";
+import CardInfo from "@/components/cardInfoComponent/cardInfo.vue";
 
 const search = ref("");
 
@@ -47,7 +49,12 @@ const countries = ref([
   </header>
   <search-component v-model="search" />
   <countries-component :countries="filteredCountries" />
-  <menu-component />
+  <card-info title="Подключенные акции">
+    <p class="card_text">Чтобы подключить акцию наберите : *989*1#OK</p>
+    <p class="card_text">
+      На счете должно быть не менее 290 ₸ (для списание абонентской платы).
+    </p>
+  </card-info>
   <button-component />
 </template>
 
@@ -61,5 +68,12 @@ const countries = ref([
   font-size: 20px;
   font-weight: 700;
   flex-grow: 1;
+}
+.card_text {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  padding: 7px;
 }
 </style>

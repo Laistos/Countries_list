@@ -6,12 +6,14 @@ let isVisible = ref(false);
 const onToggle = () => {
   isVisible.value = !isVisible.value;
 };
+
+const { title = "Spoiler" } = defineProps({ title: String });
 </script>
 
 <template>
-  <div class="menu_container">
+  <section class="card_container">
     <button @click="onToggle()" class="button_container">
-      <span class="menu_button">Подключение акции</span>
+      <span class="card_button">{{ title }}</span>
       <img
         class="arrow-icon"
         :class="{ 'arrow-up': isVisible }"
@@ -19,13 +21,10 @@ const onToggle = () => {
         alt="#"
       />
     </button>
-    <div class="menu_text-container" v-if="isVisible">
-      <p class="menu_text">Чтобы подключить акцию наберите : *989*1#OK</p>
-      <p class="menu_text">
-        На счете должно быть не менее 290 ₸ (для списание абонентской платы).
-      </p>
+    <div class="card_text-container" v-if="isVisible">
+      <slot></slot>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
@@ -38,7 +37,7 @@ const onToggle = () => {
   cursor: pointer;
 }
 
-.menu_container {
+.card_container {
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 16px;
@@ -46,20 +45,12 @@ const onToggle = () => {
   font-family: sans-serif;
 }
 
-.menu_button {
+.card_button {
   border: none;
   background: none;
   color: #333;
   font-weight: 600;
   font-size: 16px;
-}
-
-.menu_text {
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #444;
-  padding: 7px;
 }
 
 .arrow-icon {

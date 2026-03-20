@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <router-link to="/success" class="submit_button">Подключить</router-link>
+  <button class="submit_button">Подключить</button>
 </template>
 
 <style scoped>
@@ -20,7 +20,8 @@
   text-decoration: none;
   transition:
     background-color 0.2s ease,
-    transform 0.1s active;
+    transform 0.1s,
+    active;
 }
 
 .submit_button:hover {

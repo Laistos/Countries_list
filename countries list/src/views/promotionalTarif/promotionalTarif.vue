@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonComponent from "@/views/promotionalTarif/promotionalTarifPageComponents/buttonComponent.vue";
+import ButtonComponent from "@/components/buttonComponent/buttonComponent.vue";
 import SearchComponent from "@/components/searchComponent/searchComponent.vue";
 import { computed, ref } from "vue";
 import CardInfo from "@/components/cardInfo/cardInfo.vue";
@@ -53,7 +53,7 @@ const countries = ref([
       На счете должно быть не менее 290 ₸ (для списание абонентской платы).
     </p>
   </card-info>
-  <button-component />
+  <router-link to="/success"><button-component /></router-link>
 </template>
 
 <style scoped>

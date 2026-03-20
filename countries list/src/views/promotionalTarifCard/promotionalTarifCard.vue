@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ButtonComponent from "@/components/buttonComponent/buttonComponent.vue";
+</script>
 
 <template>
   <div class="tarif-container">
     <div class="header">
-      <router-link to="/" class="back"
-        ><svg
+      <router-link to="/" class="back">
+        <svg
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -17,8 +19,9 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-          /></svg
-      ></router-link>
+          />
+        </svg>
+      </router-link>
       <h1 class="tarif-title">Акционные тарифы</h1>
     </div>
     <div class="tarif-card">
@@ -33,8 +36,8 @@
       <p class="tarif-text">Подключение 0 ₸</p>
     </div>
     <div class="tarif-buttons">
-      <router-link to="/about" class="tarif-button btn1"
-        >Подключить
+      <router-link to="/about" class="btn1">
+        <button-component />
       </router-link>
       <button class="tarif-button btn2">Подробнее</button>
     </div>
@@ -44,11 +47,13 @@
 <style scoped>
 .tarif-container {
 }
+
 .header {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
 }
+
 .tarif-title {
   text-align: center;
   font-size: 20px;
@@ -102,12 +107,9 @@
 .tarif-button:hover {
   opacity: 0.9;
 }
-
 .btn1 {
-  background-color: #5a2583;
-  color: #ffffff;
+  margin: 10px 0 10px 0;
 }
-
 .btn2 {
   background-color: #ffffff;
   color: #333;

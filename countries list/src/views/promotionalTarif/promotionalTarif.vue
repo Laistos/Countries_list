@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import ButtonComponent from "@/views/tarifDetails/tarifPageComponents/buttonComponent.vue";
+import ButtonComponent from "@/views/promotionalTarif/promotionalTarifPageComponents/buttonComponent.vue";
 import SearchComponent from "@/components/searchComponent/searchComponent.vue";
 import { computed, ref } from "vue";
-import CardInfo from "@/components/cardInfoComponent/cardInfo.vue";
+import CardInfo from "@/components/cardInfo/cardInfo.vue";
 import CountriesList from "@/components/countriesList/countriesList.vue";
 
 const search = ref("");
@@ -27,7 +27,7 @@ const countries = ref([
 
 <template>
   <header class="header">
-    <router-link to="/" class="back"
+    <router-link to="/promotional" class="back"
       ><svg
         width="24"
         height="24"

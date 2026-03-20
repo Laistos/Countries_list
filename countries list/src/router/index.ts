@@ -11,12 +11,13 @@ const router = createRouter({
     {
       path: "/promotional",
       name: "promotional",
-      component: () => import("@/views/tarifCard/tarifCardComponent.vue"),
+      component: () =>
+        import("@/views/promotionalTarifCard/promotionalTarifCard.vue"),
     },
     {
       path: "/about",
       name: "countries",
-      component: () => import("@/views/tarifDetails/tarifDetailsComponent.vue"),
+      component: () => import("@/views/promotionalTarif/promotionalTarif.vue"),
     },
     {
       path: "/success",

@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import CountriesList from "@/components/countriesList/countriesList.vue";
 import SearchComponent from "@/components/searchComponent/searchComponent.vue";
+import HelpfulInfo from "@/views/helpfulInfo/helpfulInfo.vue";
 
 const search = ref("");
 
@@ -59,6 +60,7 @@ const filteredCountries = computed(() =>
         тенге с учётом НДС
       </p>
     </div>
+    <helpful-info />
   </div>
 </template>
 

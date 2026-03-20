@@ -1,19 +1,21 @@
 <script setup lang="ts">
-const search = defineModel({default: ''}) //отлавливает значение и передает в родительский элемент
+const search = defineModel({ default: "" }); //отлавливает значение и передает в родительский элемент
 </script>
 
 <template>
   <div class="search_container">
-    <input v-model="search"
-           type="text"
-           class="search_input"
-           placeholder="Введите название страны"
-    >
+    <input
+      v-model="search"
+      type="text"
+      class="search_input"
+      placeholder="Введите название страны"
+    />
   </div>
 </template>
 
 <style scoped>
 .search_container {
+  margin-bottom: 15px;
 }
 
 .search_input {
